@@ -47,3 +47,24 @@
       margin-left: -15rem;
     }
   }
+  #sidebar-wrapper a{
+    text-align: left;
+  }
+  .back{
+    background: url(../img/giphy.webp) repeat;
+    background-size: cover;
+    height: 100vh;
+  
+  }
+  #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  z-index: -100;   
+}
+.navbar{
+  background-color: transparent!important;
+  border-bottom: 0px!important;
+}

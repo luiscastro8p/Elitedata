@@ -21,41 +21,70 @@
   <link href="vendor/custom/css/style.css" rel="stylesheet">
 
 </head>
+
 <body>
-    <div class="d-flex" id="wrapper">
 
-        <!-- Sidebar -->
-        <div class="bg-light border-right" id="sidebar-wrapper">
-          <div class="sidebar-heading"> EliteDATA </div>
-          <div class="list-group list-group-flush">
-            <a href="#" class="list-group-item list-group-item-action bg-light">Incendios <input type="checkbox" checked data-toggle="toggle" onChange="evento('MOD14A1_M_FIRE')" ></a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">Población <input type="checkbox" checked data-toggle="toggle" onChange="evento('SEDAC_POP')" ></a>
+  <div class="d-flex " id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right " id="sidebar-wrapper" >
+      <div class="sidebar-heading"> EliteDATA </div>
+      <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action bg-light">Incendios <input type="checkbox" checked
+            data-toggle="toggle" onChange="evento('MOD14A1_M_FIRE')"></a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Población <input type="checkbox" checked
+            data-toggle="toggle" onChange="evento('SEDAC_POP')"></a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Temperatura diaria <input type="checkbox"
+            checked data-toggle="toggle" onChange="evento('MOD_LSTD_CLIM_M')"></a>
+
+        <div class="dropdown">
+          <a class="list-group-item list-group-item-action bg-light" href="#" role="button" id="dropdownMenuLink"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Oceanos
+          </a>
+
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <!-- <a href="#" class="list-group-item list-group-item-action bg-light">Temperatura diaria <input
+                type="checkbox" checked data-toggle="toggle" onChange="evento('MOD_LSTD_CLIM_M')"></a> -->
+            <a href="#" class="list-group-item list-group-item-action bg-light">Anomalias temperatura<input
+                type="checkbox" checked data-toggle="toggle" onChange="evento('MOD_LSTAD_M')"></a>
+            <a class="dropdown-item" href="#">Something else here</a>
           </div>
         </div>
-        <!-- /#sidebar-wrapper -->
-    
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-    
-          <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-            <button class="btn btn-primary" id="menu-toggle"><i class="fas fa-bars"></i></button>
-    
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </nav>
-    
-          <div class="container-fluid">
-            <canvas class="mt-5 " id="canvasOne" width="600" height="600" ></canvas>
-          </div>
-
-        </div>
-        <!-- /#page-content-wrapper -->
-    
+        <a href="#" class="list-group-item list-group-item-action bg-light">Actualmente <input type="checkbox" checked
+            data-toggle="toggle" onChange="evento('MOD_143D_RR')"></a>
       </div>
-    <!-- <canvas class="mt-5 " id="canvasOne" width="1200" height="600" >
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-primary" id="menu-toggle"><i class="fas fa-bars"></i></button>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+
+      <div class="container-fluid d-flex justify-content-center align-content-center">
+        <canvas class="mt-5 " id="canvasOne" width="600" height="600"></canvas>
+      </div>
+
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- <canvas class="mt-5 " id="canvasOne" width="1200" height="600" >
         Your browser does not support HTML5 Canvas.
       </canvas> -->
+  <video autoplay muted loop id="myVideo">
+    <source src="./vendor/custom/img/Space-video.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
 
   <script src="https://files.worldwind.arc.nasa.gov/artifactory/web/0.9.0/worldwind.min.js" type="text/javascript">
   </script>
@@ -69,13 +98,24 @@
   <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 
   <script>
-    
+    $("#menu-toggle").click(function (e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
 
-      $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-      });
-    </script>
+    var video = document.getElementById("myVideo");
+    var btn = document.getElementById("myBtn");
+
+    function myFunction() {
+      if (video.paused) {
+        video.play();
+        btn.innerHTML = "Pause";
+      } else {
+        video.pause();
+        btn.innerHTML = "Play";
+      }
+    }
+  </script>
 
 </body>
 
