@@ -6,6 +6,29 @@
  body {
     overflow-x: hidden;
   }
+
+  .incendios.img{
+    left: 10px;
+    bottom: 10px;
+  }
+  .poblacion.img{
+    left: 10px;
+    bottom: 10px;
+  }
+  .temperatura.img{
+    left: 10px;
+    bottom: 10px;
+  }
+  .anomalia.img{
+    left: 10px;
+    bottom: 10px;
+  }
+  .cardi{
+    right: 10px;
+  }
+  .card{
+    max-width: 300px;
+  }
   
   #sidebar-wrapper {
     min-height: 100vh;

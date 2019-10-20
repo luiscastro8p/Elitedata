@@ -1,121 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
 
-<head>
+    <title>Titulo</title>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css"
+      rel="stylesheet"
+    />
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="vendor/custom/font-awesome/css/font-awesome.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/b05174ea10.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="vendor/custom/owl-carousel/owl.carousel.css" rel="stylesheet" />
+    <link
+      href="vendor/custom/owl-carousel/owl.theme.default.css"
+      rel="stylesheet"
+    />
+    <link href="vendor/custom/css/animate.css" rel="stylesheet" />
+    <link href="vendor/custom/css/style.css" rel="stylesheet" />
+  </head>
 
-  <title>Titulo</title>
+  <body>
+    <div class="d-flex " id="wrapper">
+      <!-- Sidebar -->
+      <div class="bg-light border-right " id="sidebar-wrapper">
+        <div class="sidebar-heading">EliteDATA</div>
+        <div class="list-group list-group-flush">
+          <a href="#" class="list-group-item list-group-item-action bg-light"
+            >Incendios
+            <input
+              type="checkbox"
+              data-toggle="toggle"
+              onChange="evento('MOD14A1_M_FIRE')"
+          /></a>
 
-  <!-- Bootstrap core CSS -->
-  <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="vendor/custom/font-awesome/css/font-awesome.css" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/b05174ea10.js" crossorigin="anonymous"></script>
-  <link href="vendor/custom/owl-carousel/owl.carousel.css" rel="stylesheet">
-  <link href="vendor/custom/owl-carousel/owl.theme.default.css" rel="stylesheet">
-  <link href="vendor/custom/css/animate.css" rel="stylesheet">
-  <link href="vendor/custom/css/style.css" rel="stylesheet">
+          <a href="#" class="list-group-item list-group-item-action bg-light"
+            >Población
+            <input
+              type="checkbox"
+              data-toggle="toggle"
+              onChange="evento('SEDAC_POP')"
+          /></a>
 
-</head>
+          <a href="#" class="list-group-item list-group-item-action bg-light"
+            >Temperatura diaria
+            <input
+              type="checkbox"
+              data-toggle="toggle"
+              onChange="evento('MOD_LSTD_CLIM_M')"
+          /></a>
 
-<body>
+          <div class="dropdown">
+            <a
+              class="list-group-item list-group-item-action bg-light"
+              href="#"
+              role="button"
+              id="dropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Oceanos
+            </a>
 
-  <div class="d-flex " id="wrapper">
-
-    <!-- Sidebar -->
-    <div class="bg-light border-right " id="sidebar-wrapper" >
-      <div class="sidebar-heading"> EliteDATA </div>
-      <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-light">Incendios <input type="checkbox"
-            data-toggle="toggle" onChange="evento('MOD14A1_M_FIRE')"></a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Población <input type="checkbox"
-            data-toggle="toggle" onChange="evento('SEDAC_POP')"></a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Temperatura diaria <input type="checkbox"
-           data-toggle="toggle" onChange="evento('MOD_LSTD_CLIM_M')"></a>
-
-        <div class="dropdown">
-          <a class="list-group-item list-group-item-action bg-light" href="#" role="button" id="dropdownMenuLink"
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Oceanos
-          </a>
-
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <!-- <a href="#" class="list-group-item list-group-item-action bg-light">Temperatura diaria <input
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <!-- <a href="#" class="list-group-item list-group-item-action bg-light">Temperatura diaria <input
                 type="checkbox" checked data-toggle="toggle" onChange="evento('MOD_LSTD_CLIM_M')"></a> -->
-            <a href="#" class="list-group-item list-group-item-action bg-light">Anomalias temperatura<input
-                type="checkbox" data-toggle="toggle" onChange="evento('MOD_LSTAD_M')"></a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action bg-light"
+                >Anomalias temperatura<input
+                  type="checkbox"
+                  data-toggle="toggle"
+                  onChange="evento('MOD_LSTAD_M')"
+              /></a>
+            </div>
           </div>
+          <a href="#" class="list-group-item list-group-item-action bg-light"
+            >Monitoreo tiempo real
+            <input
+              type="checkbox"
+              data-toggle="toggle"
+              onChange="evento('MOD_143D_RR')"
+          /></a>
         </div>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Monitoreo tiempo real <input type="checkbox"
-            data-toggle="toggle" onChange="evento('MOD_143D_RR')"></a>
       </div>
-    </div>
-    <!-- /#sidebar-wrapper -->
+      <!-- /#sidebar-wrapper -->
 
-    <!-- Page Content -->
+      <!-- Page Content -->
 
-    <div id="page-content-wrapper">
+      <div id="page-content-wrapper">
+        <nav
+          class="navbar navbar-expand-lg navbar-light bg-light border-bottom"
+        >
+          <button class="btn btn-primary" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <button class="btn btn-primary" id="menu-toggle"><i class="fas fa-bars"></i></button>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </nav>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </nav>
+        <div
+          class="container-fluid d-flex justify-content-center align-content-center position-relative"
+        >
+          <canvas
+            class="mt-5 "
+            id="canvasOne"
+            width="600"
+            height="600"
+          ></canvas>
 
-      <div class="container-fluid d-flex justify-content-center align-content-center">
-        <canvas class="mt-5 " id="canvasOne" width="600" height="600"></canvas>
+          <img src="./vendor/custom/img/incendio.png" class="d-none incendios img position-absolute">
+          <img src="./vendor/custom/img/poblacion.png" class="d-none poblacion img position-absolute">
+          <img src="./vendor/custom/img/temperatura.png" class="d-none temperatura img position-absolute">
+          <img src="./vendor/custom/img/anom.png" class="d-none anomalia img position-absolute">
+
+          <div class="d-none incendios position-absolute cardi">
+            <div class="card">
+              <h5 class="card-header">Incendios</h5>
+              <div class="card-body">
+                <p class="card-text">
+                  Estos mapas muestran las ubicaciones de incendios activamente encendidos en todo el mundo, detectados por instrumentos a bordo de satélites de la NASA.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-none poblacion position-absolute cardi">
+            <div class="card">
+              <h5 class="card-header">Población</h5>
+              <div class="card-body">
+                <p class="card-text">
+                  Este mapa muestra cuántas personas viven en diferentes áreas de la Tierra. El mapa se divide en numerosas cajas pequeñas, llamadas "cuadrículas". Cada cuadro de cuadrícula mide aproximadamente 1 kilómetro de largo por un kilómetro de ancho, y está codificado por colores para mostrar cuántas personas viven allí. Las áreas más claras tienen menos personas. Los puntos rojos dispersos en la mayoría de los países muestran ciudades, donde muchas personas viven en un área pequeña.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-none temperatura position-absolute cardi">
+            <div class="card">
+              <h5 class="card-header">Temperatura de la tierra</h5>
+              <div class="card-body">
+                <p class="card-text">
+                  La temperatura de la superficie terrestre es lo caliente que se siente el suelo al tacto. Si desea saber si las temperaturas en algún lugar en una época específica del año son inusualmente cálidas o frías, debe compararlas con las temperaturas promedio de ese lugar durante muchos años. Estos mapas muestran el promedio semanal o mensual de la temperatura de la superficie terrestre durante el día para el período 2001-2010.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-none today position-absolute cardi">
+            <div class="card">
+              <h5 class="card-header">Monitoreo real</h5>
+              <div class="card-body">
+                <p class="card-text">
+                  Estas imágenes muestran la superficie de la Tierra y las nubes en color verdadero, como una fotografía. La NASA usa satélites en el espacio para recopilar imágenes como estas en todo el mundo todos los días. Los científicos usan estas imágenes para rastrear los cambios en la superficie de la Tierra. Observe las formas y patrones de los colores en las tierras. Las áreas verde oscuro muestran dónde hay muchas plantas. Las áreas marrones son donde el sensor del satélite ve más de la superficie terrestre desnuda porque hay pocas plantas. Las áreas blancas son nieve o nubes. ¿Dónde diablos te gustaría explorar?
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-none anomalia position-absolute cardi">
+            <div class="card">
+              <h5 class="card-header">Anomalia de temperatura</h5>
+              <div class="card-body">
+                <p class="card-text">
+                    La temperatura de la superficie del mar es la temperatura del milímetro superior de la superficie del océano. Una anomalía es cuando algo es diferente de lo normal o promedio. Una anomalía de la temperatura de la superficie del mar es cuán diferente es la temperatura del océano en un lugar particular en un momento particular de las temperaturas normales para ese lugar. Las anomalías de la temperatura de la superficie del mar pueden ocurrir como parte de los ciclos oceánicos normales o pueden ser un signo de cambio climático a largo plazo, como el calentamiento global.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
-
+      <!-- /#page-content-wrapper -->
     </div>
-    <!-- /#page-content-wrapper -->
-
-  </div>
-  <!-- <canvas class="mt-5 " id="canvasOne" width="1200" height="600" >
+    <!-- <canvas class="mt-5 " id="canvasOne" width="1200" height="600" >
         Your browser does not support HTML5 Canvas.
       </canvas> -->
-  <video autoplay muted loop id="myVideo">
-    <source src="./vendor/custom/img/Space-video.mp4" type="video/mp4">
-    Your browser does not support HTML5 video.
-  </video>
+    <video autoplay muted loop id="myVideo">
+      <source src="./vendor/custom/img/Space-video.mp4" type="video/mp4" />
+    </video>
 
-  <script src="https://files.worldwind.arc.nasa.gov/artifactory/web/0.9.0/worldwind.min.js" type="text/javascript">
-  </script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="./vendor/custom/js/helloWorldWind.js" type="text/javascript"></script>
-  <!-- JS -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="vendor/custom/owl-carousel/owl.carousel.js"></script>
-  <script src="vendor/custom/js/wow.js"></script>
-  <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    <script
+      src="https://files.worldwind.arc.nasa.gov/artifactory/web/0.9.0/worldwind.min.js"
+      type="text/javascript"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script
+      src="./vendor/custom/js/helloWorldWind.js"
+      type="text/javascript"
+    ></script>
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/custom/owl-carousel/owl.carousel.js"></script>
+    <script src="vendor/custom/js/wow.js"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 
-  <script>
-    $("#menu-toggle").click(function (e) {
-      e.preventDefault();
-      $("#wrapper").toggleClass("toggled");
-    });
+    <script>
+      $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+      });
 
-    var video = document.getElementById("myVideo");
-    var btn = document.getElementById("myBtn");
+      var video = document.getElementById("myVideo");
+      var btn = document.getElementById("myBtn");
 
-    function myFunction() {
-      if (video.paused) {
-        video.play();
-        btn.innerHTML = "Pause";
-      } else {
-        video.pause();
-        btn.innerHTML = "Play";
+      function myFunction() {
+        if (video.paused) {
+          video.play();
+          btn.innerHTML = "Pause";
+        } else {
+          video.pause();
+          btn.innerHTML = "Play";
+        }
       }
-    }
-  </script>
-
-</body>
-
+    </script>
+  </body>
 </html>
