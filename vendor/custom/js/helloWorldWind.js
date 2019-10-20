@@ -172,6 +172,7 @@ function dmapanom() {
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 wwd.addLayer(new WorldWind.BingAerialLayer());
+wwd.addLayer(new WorldWind.AtmosphereLayer());
 // wwd.addLayer(new WorldWind.CompassLayer());
 wwd.addLayer(new WorldWind.CoordinatesDisplayLayer(wwd));
 wwd.addLayer(new WorldWind.ViewControlsLayer(wwd));
